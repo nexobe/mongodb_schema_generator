@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  schema-generator:
+    build: .
+    container_name: schema-generator
+    volumes:
+      - ./config.yaml:/app/config.yaml
+      - ./schemas:/app/schemas
+    env_file:
+      - .env
+    environment:
+      - MONGODB_URI=${MONGODB_URI}
+      - CLAUDE_API_KEY=${CLAUDE_API_KEY}

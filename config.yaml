@@ -1,0 +1,24 @@
+# MongoDB Connection Settings
+mongodb:
+  uri: ${MONGODB_URI} 
+  database: ${MONGODB_DATABASE}
+  
+# Claude API Settings
+claude:
+  api_key: ${CLAUDE_API_KEY}
+  
+# Schema Generation Settings
+schema:
+  # Fields to exclude from schema generation
+  exclude_fields: []
+  # Fields to include in schema generation (empty means all fields)
+  include_fields: []
+  # Maximum number of documents to sample for schema inference
+  sample_size: 100
+  
+# Output Settings
+output:
+  # Directory to save generated schemas
+  directory: "schemas"
+  # File format (md or mmd)
+  format: "md"
